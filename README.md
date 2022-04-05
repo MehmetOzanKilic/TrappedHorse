@@ -2,7 +2,7 @@
 
 //Open Raw or Blame
 
-This code is about a video I saw from the Numberphile youtube channel. The video is titeled "The Trapped Knight - Numberphile". In this video an infinite square shaped
+This code is about a video I saw from the Numberphile youtube channel. The video is titled "The Trapped Knight - Numberphile". In this video an infinite square shaped
 spiral strating from 1 and goes to infinity is places on a infinitely big chess board. A horse is placed in the center (1), and it can move as a normal chess horse would
 move. However, every move the horse makes should aim for the lowest possible value and it cannot go on a number that it have previously been on. The question asked in the
 video was wether this horse would get trapped or not. It is shown in the video that horse would get trapped when it reaches the number 2084. There are also variations of 
