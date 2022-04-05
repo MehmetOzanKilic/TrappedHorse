@@ -256,11 +256,11 @@ void Horse::moveLeft()
 		}
 		break;
 	case 2:
-		if (abs(x) > abs(y))
+		if (abs(x) < abs(y))
 		{
 			value = value + 1;
 		}
-		if (abs(x) <= abs(y))
+		if (abs(x) >= abs(y))
 		{
 			value = value + (5 + (8 * (abs(x))));
 		}
@@ -346,7 +346,7 @@ void Horse::moveDown()
 		}
 		break;
 	case 4:
-		if (abs(x) >= 3 && abs(x)-2 >= abs(y))
+		if ( abs(x)-2 >= abs(y))
 		{
 			value = value - 1;
 		}
@@ -356,7 +356,7 @@ void Horse::moveDown()
 		}
 		break;
 	case 11:
-		if (abs(x) == 1) { value = value + 7; }
+		if (x == 1) { value = value + 7; }
 		else value = value - 1;
 		break;
 	case 22:
