@@ -47,7 +47,7 @@ public:
 	void moveDown();
 	void setXYV(int a, int b, int v);
 	void printXY();
-	void horseMoves();
+	void horseMoves(int a);
 
 };
 
@@ -276,11 +276,11 @@ void Horse::moveLeft()
 		}
 		break;
 	case 4:
-		if (abs(x) >= abs(y))
+		if (abs(x)-1 <= abs(y))
 		{
 			value = value - 1;
 		}
-		if (abs(x) < abs(y))
+		/*if (abs(x) < abs(y))*/else
 		{
 			value = value - (1 + (8 * (abs(x) - 1)));
 		}
@@ -346,17 +346,18 @@ void Horse::moveDown()
 		}
 		break;
 	case 4:
-		if (abs(x) > abs(y))
+		if (abs(x) >= 3 && abs(x)-2 >= abs(y))
 		{
 			value = value - 1;
 		}
-		if (abs(x) <= abs(y))
+		/*if (abs(x) < 3 && abs(x) >= abs(y))*/else
 		{
 			value = value + (7 + (8 * (abs(y))));
 		}
 		break;
 	case 11:
-		value = value - 1;
+		if (abs(x) == 1) { value = value + 7; }
+		else value = value - 1;
 		break;
 	case 22:
 		value = value - (3 + (8 * (abs(y) - 1)));
@@ -374,11 +375,12 @@ void Horse::moveDown()
 	cout << value;
 }
 
-void Horse::horseMoves()
+void Horse::horseMoves(int a)
 {
 	int flag;
-	srand(time(0));
-	flag = ((rand() % 8) + 1);
+	/*srand(time(0));
+	flag = ((rand() % 8) + 1);*/
+	flag = a;
 	cout << "flag is: " << flag << endl;
 
 
@@ -440,21 +442,22 @@ int main()
 {
 	Horse horse;
 	int value;
-	int getButton = 0;
+	int getButton = 'h';
 	char movement;
 
 	value = horse.getValue();
 	cout << value << endl;
 
 
-	while (getButton == 0)
+	while (true)
 	{
-		cin >> movement;
+		int a;
 
-		switch (movement)
+		switch (getButton)
 		{
 		case'h':
-			horse.horseMoves();
+			cin >> a;
+			horse.horseMoves(a);
 			cout << "horse moved" << endl;
 			break;
 		case 'r':
@@ -475,8 +478,8 @@ int main()
 
 		value = horse.getValue();
 		cout << value << endl;
-		getButton++;
-		cin >> getButton;
+		/*getButton++;
+		cin >> getButton;*/
 	}
-	cout << "deneme";
+	
 }
