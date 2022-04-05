@@ -9,7 +9,7 @@ video was wether this horse would get trapped or not. It is shown in the video t
 this problem in which you change how you arrange the numbers starting from 1. I wanted to see if I could find this number myself. It turns out it is very hard to get a 
 algebraic function from a this kind of spiral. I hope this may help people who also want to work with these kind of spirals.
 
-Square Spiral: My code is written based on this form of the spiral. Changing where you put the 2, and changing the rotation the numbers follow will not work with this code.
+Square Spiral: My code is written based on this form of the spiral. Changing where you put the 2 (I put it on the right of 1) , and changing the rotation the numbers follow will not work with this code.
 
 ................................
 ........17 16 15 14 13..........
