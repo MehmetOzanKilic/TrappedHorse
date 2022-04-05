@@ -455,7 +455,7 @@ int main()
 		{
 		case'h':
 			horse.horseMoves();
-			cout << "horse move" << endl;
+			cout << "horse moved" << endl;
 			break;
 		case 'r':
 			horse.moveRight();
