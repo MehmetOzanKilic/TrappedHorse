@@ -478,4 +478,5 @@ int main()
 		getButton++;
 		cin >> getButton;
 	}
+	cout << "deneme";
 }
